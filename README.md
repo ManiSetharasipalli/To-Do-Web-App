@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# ✅ To-Do Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive to-do list application built with React.js and styled with Tailwind CSS. Features a beautiful user interface with smooth interactions and complete task management functionality.
 
-## Available Scripts
+## 🌐 Live Demo
 
-In the project directory, you can run:
+[View Live App](https://todowebapp-orcin.vercel.app/)
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📱 Fully responsive design
+- ✨ Modern and clean user interface
+- ➕ Create new tasks
+- 📋 View list of all tasks
+- ✏️ Edit existing tasks
+- 🗑️ Delete individual tasks
+- 🧹 Clear all tasks
+- 🎯 Priority levels for tasks
+- ✅ Mark tasks as complete
+- 🎨 Beautiful UI components
+- 🚀 Fast and smooth interactions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Built With
 
-### `npm test`
+- [React.js](https://reactjs.org/) - Frontend framework
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Heroicons](https://heroicons.com/) - Icons
+- [JSON Server](https://github.com/typicode/json-server) - Backend API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔗 API Integration
 
-### `npm run build`
+This app uses a custom-built mock API for data persistence. The API is hosted at:
+- API Base URL: https://to-do-reminder-mock-apis.onrender.com
+- API Repository: [To-Do Reminder Mock APIs](https://github.com/ManiSetharasipalli/to-do-reminder-mock-apis.git)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 Local Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ManiSetharasipalli/To-Do-Web-App.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   cd To-Do-Web-App
+   npm install
+   ```
 
-### `npm run eject`
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app will be available at `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Features Showcase
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Task Management
+- Create tasks with title, details, and priority
+- Edit existing tasks
+- Delete tasks individually
+- Clear all tasks at once
+- Mark tasks as complete/incomplete
 
-## Learn More
+### UI Features
+- Clean and modern design
+- Responsive layout for all screen sizes
+- Smooth animations and transitions
+- Intuitive user interface
+- Priority-based color coding
+- Loading states and error handling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application is deployed on [Vercel](https://vercel.com) and is accessible at https://todowebapp-orcin.vercel.app/
 
-### Code Splitting
+## 🔄 API Functions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+- GET /tasks - Fetch all tasks
+- POST /tasks - Create new task
+- PUT /tasks/:id - Update task
+- DELETE /tasks/:id - Delete task
+- DELETE /tasks - Delete all tasks
+```
 
-### Analyzing the Bundle Size
+## 👤 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Mani Setharasipalli**
 
-### Making a Progressive Web App
+* GitHub: [@ManiSetharasipalli](https://github.com/ManiSetharasipalli)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🙏 Acknowledgments
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Thanks to the React.js community for the amazing tools and resources
+- Tailwind CSS for the utility-first CSS framework
+- Heroicons for the beautiful icons

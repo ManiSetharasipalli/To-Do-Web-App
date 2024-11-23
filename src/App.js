@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Button from './components/Button';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
@@ -20,6 +20,8 @@ function App() {
     fetchTasks();
   }, []);
 
+ // Fetch tasks from the mock API. 
+
   const fetchTasks = async () => {
     try {
       setLoading(true);
@@ -34,7 +36,6 @@ function App() {
 
   const addTask = async (newTask) => {
     try {
-      // Add a generated ID if creating a new task
       const taskWithId = editingTask
         ? newTask
         : { ...newTask, id: Date.now().toString() };
@@ -110,6 +111,7 @@ function App() {
           <h1 className="text-4xl font-bold mb-4">To-Do Reminder</h1>
           <p className="text-gray-600 mb-6">Stay organized, get more done</p>
           <div className='flex justify-center items-center'>
+          {/* Button component for adding a new task */}
           <Button
             text="Add Task"
             onClick={() => setShowForm(true)}
@@ -117,8 +119,9 @@ function App() {
             className="bg-indigo-600 hover:bg-indigo-700"
           />
           </div>
-        </div>
 
+        </div>
+        {/* Messages components. */}
         {error && <ErrorNotification message={error} onClose={() => setError(null)} />}
         {deletionMessage && <DeletionMessage message={deletionMessage} />}
 
