@@ -34,32 +34,25 @@ function App() {
     }
   };
 
-  const addTask = async (newTask) => {
+  const addTask = async (newtask) =>{
     try {
-      const taskWithId = editingTask
-        ? newTask
-        : { ...newTask, id: Date.now().toString() };
-  
-      const result = editingTask
-        ? await api.updateTask(editingTask.id, taskWithId)
-        : await api.createTask(taskWithId);
-  
+      const result = editingTask 
+           ? await api.updateTask(editingTask.id, newtask)
+           : await api.createTask(newtask);
+      
       setTasks((prevTasks) =>
-        editingTask
-          ? prevTasks.map((task) => (task.id === editingTask.id ? result : task))
-          : [...prevTasks, result]
-      );
-  
+      editingTask 
+      ? prevTasks.map((task) => (task.id === editingTask.id ? result : task))
+      : [...prevTasks, result])
       setShowForm(false);
-      setEditingTask(null);
+      setEditingTask(null)
     } catch (err) {
-      setError(editingTask ? 'Failed to update task' : 'Failed to create task');
-    }
-  };
-  
-
+          setError(editingTask ? 'Failed to update task' : 'Failed to create task');
+        }
+}
   const deleteTask = async (id) => {
     try {
+      
       await api.deleteTask(id);
       setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
       setDeletionMessage('Task has been deleted');
@@ -71,8 +64,7 @@ function App() {
 
   const deleteAllTasks = async () => {
     try {
-      const tasksToDelete = await api.getTasks();
-      for (const task of tasksToDelete) await api.deleteTask(task.id);
+      await api.deleteAllTasks();
       setTasks([]);
       setDeletionMessage('All tasks have been deleted');
       setTimeout(() => setDeletionMessage(null), 3000);
@@ -84,7 +76,7 @@ function App() {
   const toggleCompletion = async (id) => {
     try {
       const task = tasks.find(t => t.id === id);
-      const updated = await api.toggleTaskCompletion(id, !task.completed);
+      const updated = await api.toggleTaskCompletion(id, !task.is_completed);
       setTasks((prevTasks) =>
         prevTasks.map((t) => (t.id === id ? updated : t))
       );

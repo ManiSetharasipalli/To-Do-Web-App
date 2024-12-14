@@ -28,7 +28,7 @@ function TaskCard({ task, onComplete, onEdit, onDelete }) {
             <button
               onClick={() => onComplete(task.id)}
               className={`p-1.5 rounded-md hover:bg-gray-100 transition-colors ${
-                task.completed ? 'text-green-600' : 'text-gray-400'
+                task.is_completed ? 'text-green-600' : 'text-gray-400'
               }`}
               title="Completed"
             >
@@ -54,7 +54,7 @@ function TaskCard({ task, onComplete, onEdit, onDelete }) {
         {/* Task details */}
         <div className="p-4 flex-1 overflow-auto">
           <p className="text-gray-600 text-sm">
-            {task.details || 'No description provided'}
+            {task.description || 'No description provided'}
           </p>
         </div>
 
@@ -65,10 +65,10 @@ function TaskCard({ task, onComplete, onEdit, onDelete }) {
           </span>
           <span
             className={`text-sm font-semibold ${
-              task.completed ? 'text-green-600' : 'text-red-600'
+              task.is_completed ? 'text-green-600' : 'text-red-600'
             }`}
           >
-            {task.completed ? 'Completed' : 'Incomplete'}
+            {task.is_completed ? 'Completed' : 'Incomplete'}
           </span>
         </div>
       </div>

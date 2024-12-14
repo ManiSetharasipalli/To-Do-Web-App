@@ -5,7 +5,7 @@ import { XMarkIcon } from '@heroicons/react/16/solid';
 
 function TaskForm({ addTask, editingTask, onClose }) {
   const [title, setTitle] = useState(editingTask?.title || '');
-  const [details, setDetails] = useState(editingTask?.details || '');
+  const [description, setDescription] = useState(editingTask?.description || '');
   const [priority, setPriority] = useState(editingTask?.priority || 'medium');
   const [error, setError] = useState('');
 
@@ -23,11 +23,9 @@ function TaskForm({ addTask, editingTask, onClose }) {
     }
     
     addTask({
-      id: editingTask?.id || Date.now(),
       title,
-      details,
-      priority,
-      completed: editingTask?.completed || false,
+      description,
+      priority
     });
   };
 
@@ -64,6 +62,7 @@ function TaskForm({ addTask, editingTask, onClose }) {
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full px-4 py-2.5 border border-gray-500 rounded-lg focus:outline-none"
                 placeholder="Enter task title"
+                maxLength={40}
               />
             </div>
 
@@ -95,8 +94,8 @@ function TaskForm({ addTask, editingTask, onClose }) {
               </label>
               <textarea
                 id="details"
-                value={details}
-                onChange={(e) => setDetails(e.target.value)}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 rows="4"
                 className="w-full px-4 py-2.5 border border-gray-500 rounded-lg focus:outline-none resize-none"
                 placeholder="Enter task details (optional)"
