@@ -20,7 +20,6 @@ function App() {
     fetchTasks();
   }, []);
 
- // Fetch tasks from the mock API. 
 
   const fetchTasks = async () => {
     try {
