@@ -25,13 +25,10 @@ A modern, responsive to-do list application built with React.js and styled with 
 - [React.js](https://reactjs.org/) - Frontend framework
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Heroicons](https://heroicons.com/) - Icons
-- [JSON Server](https://github.com/typicode/json-server) - Backend API
 
 ## 🔗 API Integration
-
-This app uses a custom-built mock API for data persistence. The API is hosted at:
-- API Base URL: https://to-do-reminder-mock-apis.onrender.com
-- API Repository: [To-Do Reminder Mock APIs](https://github.com/ManiSetharasipalli/to-do-reminder-mock-apis.git)
+This app uses an API built with the Django framework using Django REST Framework (DRF) for data persistence.
+- API Repository: [TODO_Web_Django_APIS](https://github.com/ManiSetharasipalli/TODO_Web_Django_APIS.git)
 
 ## 💻 Local Development
 
